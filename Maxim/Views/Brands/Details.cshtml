@@ -1,0 +1,121 @@
+﻿@model maximFinal.Models.Brand
+@{int imageindex = 0;}
+
+    <div id="top-container" class="container-fluid" style="padding-top:3.5%; background-color:whitesmoke;">
+
+        <div id="carouselExampleIndicators" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" style="height: 60%;">
+            <ol class="carousel-indicators">
+                @foreach (var item in Model.MiscAttachment)
+                {
+                    @if (imageindex == 0)
+                    {
+                        <li data-target="#carouselExampleIndicators" data-slide-to="@imageindex" class="active"></li>
+                    }
+                    else
+                    {
+                        <li data-target="#carouselExampleIndicators" data-slide-to="@imageindex"></li>
+                    }
+                    imageindex++;
+                }
+            </ol>
+            @{ int imageindex1 = 0; }
+            <div class="carousel-inner">
+                @foreach (var item in Model.MiscAttachment)
+                {
+                    if (imageindex1 == 0)
+                    {
+                        <!--First slide-->
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="@Html.Raw(item.Attachment)">
+                        </div>
+                        <!--/First slide-->
+                    }
+                    else
+                    {
+                        <!--Other slides-->
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="@Html.Raw(item.Attachment)">
+                        </div>
+                        <!--/Other slides-->
+                    }
+                    imageindex1 = 1;
+                }
+            </div>
+            <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <hr>
+
+
+        <div class="card" style="margin:auto">
+            <div class="row">
+                <div class="col-sm-2">
+                    <img class="d-block" style="width: 70%;position: sticky;left: 10%;top:14%" src="@Html.Raw(Model.ThumbnailTemp)">
+                </div>
+                <div class="col-sm-10" style="padding-top: 3%;padding-bottom: 2.5%;">
+                    <h2>@Html.Raw(Model.Name)</h2>
+                    <h6>@Html.Raw(Model.Description)</h6>
+                </div>
+            </div>
+        </div>
+
+
+
+        <hr>
+
+
+        <!--Section: Brands-->
+
+
+        <h3 class="h3 mb-3 text-center">Related Products</h3><hr>
+        @*<div class="product-container">
+            <div class="row" style="margin:auto">
+                @foreach (var item in Model.Product)
+                {
+
+                    <div class="col-sm-3 mb-5 card">
+                        <a href="@Url.Content("~/Products/Details/" + item.Id)">
+                            <div class="container">
+                                <img class="d-block" style="width: 70%;position: sticky;left: 10%;top:14%" src="@Html.Raw(item.TempThumbnail)" alt="Avatar" >
+                                <div class="overlay">
+                                    <div class="text">@Html.Raw(item.Name)</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+
+                }
+
+        </div>*@
+        <div class="product-container card " style="margin:auto;padding-top: 3%;padding-left: 2.5%;padding-right: 2.5%;background-color: #f3f3f3;">
+            <div class="row" style="margin:auto">
+                @foreach (var item in Model.Product)
+                {
+                   
+                        <div class="col-sm-3 mb-5">
+                            <div class="container card" style="padding-top: 3%;padding-bottom: 3%;">
+                                <a href="@Url.Content("~/Products/Details/" + item.Id)">
+
+                                    <img class="d-block" style="width: 200px;height: 200px;position: relative;left: 20%;top:14%;" src="@Html.Raw(item.TempThumbnail)" alt="Avatar">
+                                    <div class="overlay">
+                                        <div class="text">@Html.Raw(item.Name)</div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                }
+
+            </div>
+
+
+            </div>
+
+        </div>
+
+

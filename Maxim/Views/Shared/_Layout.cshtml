@@ -1,0 +1,520 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Maxim</title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="css/style.min.css" rel="stylesheet">
+
+
+    <link rel="stylesheet" href="~/css/site.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <!-- Bootstrap core CSS -->
+    <link href="~/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Material Design Bootstrap -->
+    <link href="~/css/mdb.min.css" rel="stylesheet">
+    <!-- Your custom styles (optional) -->
+    <link href="~/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <!-- Navbar -->
+        <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
+            <div class="container-fluid">
+
+                <!-- Navbar brand -->
+                <a asp-area="" asp-controller="Home" asp-action="Index" class="navbar-brand">MAXIM</a>
+
+                <!-- Collapse button -->
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent2"
+                        aria-controls="navbarSupportedContent2" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Collapsible content -->
+                <div class="collapse navbar-collapse" id="navbarSupportedContent2">
+
+                    <!-- Links -->
+                    <ul class="navbar-nav mr-auto">
+
+                        <!-- Brands -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a href="/Brands" class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3"
+                               aria-haspopup="true" aria-expanded="false">Brands</a>
+                            <div class="dropdown-menu mega-menu v-2 z-depth-1 py-5 px-3"
+                                 aria-labelledby="navbarDropdownMenuLink3" style="margin-top: -3px;">
+                                <div class="row">
+                                    <div class="container-fluid" id="menu" style="padding-left:20px;padding-right:20px">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/167"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/3m-1-130x130.png" width="130" height="130"></a>
+                                                <p>3M Dynatel</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/598"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/ah-systems-130x130.png" width="130" height="130"></a>
+                                                <p>A.H. Systems</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/168"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/aps-130x130.png" width="130" height="130"></a>
+                                                <p>Adaptive Power</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/5"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2019/03/ae-techron-130x130.png" width="130" height="130"></a>
+                                                <p>AE Techron</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/593"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/aemc-130x130.png" width="130" height="130"></a>
+                                                <p>AEMC Instruments</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/171"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2019/03/amplifier-Research-130x130.png" width="130" height="130"></a>
+                                                <p>Amplifier Research</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/172"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/anritsu-130x130.png" width="130" height="130"></a>
+                                                <p>Anritsu</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/624"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/apt-130x130.png" width="130" height="130"></a>
+                                                <p>Associated Power</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/174"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/associated-research-130x130.png" width="130" height="130"></a>
+                                                <p>Associated Research</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/175"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/astronova-130x130.png" width="130" height="130"></a>
+                                                <p>AstroNova</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/176"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/awt-global-130x130.png" width="130" height="130"></a>
+                                                <p>AWT Global</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/177"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/bacharach-130x130.png" width="130" height="130"></a>
+                                                <p>Bacharach</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/178"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/blue-m-130x130.png" width="130" height="130"></a>
+                                                <p>Blue M</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/179"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/bruel_kjaer-130x130.png" width="130" height="130"></a>
+                                                <p>Bruel & Kjaer</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/181"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/cci-130x130.png" width="130" height="130"></a>
+                                                <p>CCI</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/182"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/chroma-130x130.png" width="130" height="130"></a>
+                                                <p>Chroma</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/183"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/com-power-130x130.png" width="130" height="130"></a>
+                                                <p>Com-Power</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Brands/Details/602"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/electro-metrics-130x130.png" width="130" height="130"></a>
+                                                <p>Electro-Metrics</p>
+                                                <a href="/Brands" style="color:deepskyblue">>View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+
+                        <!-- Categories -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a href="/Categories" class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3"
+                               aria-haspopup="true" aria-expanded="false">Categories</a>
+                            <div class="dropdown-menu mega-menu v-2 z-depth-1 py-5 px-3"
+                                 aria-labelledby="navbarDropdownMenuLink3" style="margin-top: -3px;">
+                                <div class="row">
+                                    <div class="container-fluid" id="menu" style="padding-left:20px;padding-right:20px">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/815"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2019/01/amplifier-1-130x130.png" width="130" height="130"></a>
+                                                <p>Amplifiers</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/638"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/analyzer-130x130.png" width="130" height="130"></a>
+                                                <p>Analyzers</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/653"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/antenna-130x130.png" width="130" height="130"></a>
+                                                <p>Antennas</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/703"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/cable-fault-locator-130x130.png" width="130" height="130"></a>
+                                                <p>Cable Fault Locators</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/682"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/calibrator-130x130.png" width="130" height="130"></a>
+                                                <p>Calibrators</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/54"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/chambers-130x130.png" width="130" height="130"></a>
+                                                <p>Chambers/Ovens</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/714"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2019/02/cdn-130x130.png" width="130" height="130"></a>
+                                                <p>Coupling Networks</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/704"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2019/01/teseq-cip_9138-130x130.png" width="130" height="130"></a>
+                                                <p>Current Probes</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/64"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/data-acquisition-130x130.png" width="130" height="130"></a>
+                                                <p>Data Acquisition</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/715"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/Dual-Directional-Couplers-130x130.png" width="130" height="130"></a>
+                                                <p>Directional Couplers</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/669"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/electronic-load-2-130x130.png" width="130" height="130"></a>
+                                                <p>Electronic Loads</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/68"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/emc-130x130.png" width="130" height="130"></a>
+                                                <p>EMC/EMI</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/88"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/environmental-130x130.png" width="130" height="130"></a>
+                                                <p>Environmental</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/101"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/esd-1-130x130.png" width="130" height="130"></a>
+                                                <p>ESD Simulators</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/630"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/meter-1-130x130.png" width="130" height="130"></a>
+                                                <p>Meters</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/717"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/01/teseq_gtem_750-130x130.png" width="130" height="130"></a>
+                                                <p>GTEM/TEM Cell</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/664"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/hipots-130x130.png" width="130" height="130"></a>
+                                                <p>Hipots</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Categories/Details/673"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/02/lisn-130x130.png" width="130" height="130"></a>
+                                                <p>LISN</p>
+                                                <a href="/Categories" style="color:deepskyblue">>View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Industries -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a href="/Industries" class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3"
+                               aria-haspopup="true" aria-expanded="false">Industries</a>
+                            <div class="dropdown-menu mega-menu v-2 z-depth-1 py-5 px-3"
+                                 aria-labelledby="navbarDropdownMenuLink3" style="margin-top: -3px;">
+                                <div class="row">
+                                    <div class="container-fluid" id="menu" style="padding-left:20px;padding-right:20px">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/217"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/aerospace-130x130.png" width="130" height="130"></a>
+                                                <p>Aerospace</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/218"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/automotive-130x130.png" width="130" height="130"></a>
+                                                <p>Automotive</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/219"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/broadcast-130x130.png" width="130" height="130"></a>
+                                                <p>Broadcast</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/221"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/component-130x130.png" width="130" height="130"></a>
+                                                <p>Components</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/629"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/consumer-electronics-130x130.png" width="130" height="130"></a>
+                                                <p>Consumer Electronics</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/220"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/defense-130x130.png" width="130" height="130"></a>
+                                                <p>Defense</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/222"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/green-mobility-130x130.png" width="130" height="130"></a>
+                                                <p>Green Mobility</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/223"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/indoor-appliances-130x130.png" width="130" height="130"></a>
+                                                <p>Indoor Appliances</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/224"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/industrial-130x130.png" width="130" height="130"></a>
+                                                <p>Industrial</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/225"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/information-technology-130x130.png" width="130" height="130"></a>
+                                                <p>Information Technology</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/226"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/medical-130x130.png" width="130" height="130"></a>
+                                                <p>Medical</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/227"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/military-130x130.png" width="130" height="130"></a>
+                                                <p>Military</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/228"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/outdoor-appliances-130x130.png" width="130" height="130"></a>
+                                                <p>Outdoor Appliances</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/230"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/renewable-energy-130x130.png" width="130" height="130"></a>
+                                                <p>Renewable Energy</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/225"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/information-technology-130x130.png" width="130" height="130"></a>
+                                                <p>Information Technology</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/232"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/smart-grid-130x130.png" width="130" height="130"></a>
+                                                <p>Smart Grid</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/233"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/solar-panels-130x130.png" width="130" height="130"></a>
+                                                <p>Solar Panels</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Industries/Details/234"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/08/telecommunications-130x130.png" width="130" height="130"></a>
+                                                <p>Telecommunications</p>
+                                                <a href="/Industries" style="color:deepskyblue">>View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Standards -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a href="/StandardParents" class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3"
+                               aria-haspopup="true" aria-expanded="false">Standards</a>
+                            <div class="dropdown-menu mega-menu v-2 z-depth-1 py-5 px-3"
+                                 aria-labelledby="navbarDropdownMenuLink3" style="margin-top: -3px;">
+                                <div class="row">
+                                    <div class="container-fluid" id="menu" style="padding-left:20px;padding-right:20px">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/237"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/ansi_5-130x130.png" width="130" height="130"></a>
+                                                <p>ANSI/IEEE Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/457"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/oem_2-130x130.png" width="130" height="130"></a>
+                                                <p>Automotive OEM Specifications</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/388"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/automotive-1-130x130.png" width="130" height="130"></a>
+                                                <p>Automotive Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/263"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/basic_2-130x130.png" width="130" height="130"></a>
+                                                <p>Basic Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/235"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/cispr-130x130.png" width="130" height="130"></a>
+                                                <p>CISPR Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/441"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/generic-1-130x130.png" width="130" height="130"></a>
+                                                <p>Generic Standards</p>
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/741"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/international-130x130.png" width="130" height="130"></a>
+                                                <p>International Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/305"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/mil-std-130x130.png" width="130" height="130"></a>
+                                                <p>MIL-STD</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/330"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/product-1-130x130.png" width="130" height="130"></a>
+                                                <p>Product Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/293"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/telecom-130x130.png" width="130" height="130"></a>
+                                                <p>Telecom Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/437"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/ul-1-130x130.png" width="130" height="130"></a>
+                                                <p>UL Standards</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/StandardParents/Details/741"><img border="0" alt="icon" src="http://maxi.maximinstruments.com/wp-content/uploads/2017/07/international-130x130.png" width="130" height="130"></a>
+                                                <p>International Standards</p>
+                                                <a href="/StandardParents" style="color:deepskyblue">>View More</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <!-- Applications -->
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a href="/Applications" class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink3"
+                               aria-haspopup="true" aria-expanded="false">Applications</a>
+                            <div class="dropdown-menu mega-menu v-2 z-depth-1 py-5 px-3"
+                                 aria-labelledby="navbarDropdownMenuLink3" style="margin-top: -3px;">
+                                <div class="row">
+                                    <div class="container-fluid" id="menu" style="padding-left:20px;padding-right:20px">
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <a href="/Applications/Details/854"><img border="0" alt="icon" src="~/images/a1.png" width="130" height="130"></a>
+                                                <p>Communications</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Applications/Details/852"><img border="0" alt="icon" src="~/images/a2.png" width="130" height="130"></a>
+                                                <p>Electrical Power & /Brands/Details/</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Applications/Details/850"><img border="0" alt="icon" src="~/images/a3.png" width="130" height="130"></a>
+                                                <p>EMC</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Applications/Details/851"><img border="0" alt="icon" src="~/images/a4.png" width="130" height="130"></a>
+                                                <p>Environmental</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Applications/Details/855"><img border="0" alt="icon" src="~/images/a5.png" width="130" height="130"></a>
+                                                <p>Programmable Power</p>
+                                            </div>
+                                            <div class="col-sm-2">
+                                                <a href="/Applications/Details/853"><img border="0" alt="icon" src="~/images/a6.png" width="130" height="130"></a>
+                                                <p>RF Microwave</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <!-- Links -->
+                    <!-- Search form -->
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown mega-dropdown">
+                            <a class="nav-link dropdown-toggle text-uppercase" id="navbarDropdownMenuLink2" data-toggle="dropdown"
+                               aria-haspopup="true" aria-expanded="false" style="background-color:transparent!important;">
+                                <i class="fas fa-search white-text"></i>
+                                <span class="sr-only">(current)</span>
+                            </a>
+                            <div class="dropdown-menu mega-menu v-2 z-depth-1 py-5 px-3"
+                                 aria-labelledby="navbarDropdownMenuLink2" style="background: rgba(25, 25, 25, .5);margin-top: -3px;">
+                                <div class="row">
+                                    <div class="input-group md-form form-sm form-2 pl-0" style="padding-left:500px !important;padding-right:500px!important;height:50px;">
+                                        <input class="form-control my-0 py-1 white-border" type="text" placeholder="Search" aria-label="Search">
+                                        <div class="input-group-append">
+                                            <span class="input-group-text special-color" id="basic-text1">
+                                                <i class="fas fa-search text-white"
+                                                   aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <!-- Collapsible content -->
+
+            </div>
+        </nav>
+        <!-- Navbar -->
+    </header>
+
+
+    <div>
+        @*<partial name="_CookieConsentPartial" />*@
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2019 - Maxim - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer>
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-3.3.1.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd">
+        </script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+
+    <!-- Bootstrap tooltips -->
+    <script type="text/javascript" src="~/js/popper.min.js"></script>
+    <!-- Bootstrap core JavaScript -->
+    <script src="~/js/bootstrap.min.js"></script>
+    <!-- MDB core JavaScript -->
+    <script src="~/js/mdb.min.js"></script>
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

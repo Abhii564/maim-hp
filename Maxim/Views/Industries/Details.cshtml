@@ -1,0 +1,51 @@
+﻿@model maximFinal.Models.IndustryModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+
+<div id="top" class="container-fluid" style="background-color:black;padding:100px">
+    <div class="container-fluid" style="background-color:white">
+        <div class="row" style="padding-top:150px;padding-bottom:150px;padding-left:50px;">
+            <div class="scrollbox scrollbox_delayed" tabindex="0">
+
+                <div class="scrollbox-content">
+                    <h2>@Html.Raw(Model.Name)</h2><hr>
+                    <pre class="wrap">@Html.Raw(Model.Description)</pre>
+                </div>
+
+            </div>
+            <div class="col-sm-6" style="text-align:center">
+                <img src="@Html.Raw(Model.ThumbnailInd)">
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<section>
+    <div class="container-fluid">
+        <h3 class="h3 mb-3 text-center" style="padding-top:50px;">RELATED PRODUCTS</h3><hr>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model.Product)
+            {
+                <div class="col-sm-3  mb-5">
+                    <a href="@Url.Content("~/Products/Details/" + item.Id)">
+                        <div class="container">
+                            <img src="@Html.Raw(item.TempThumbnail)" alt="Avatar" class="image">
+                            <div class="overlay">
+                                <div class="text">@Html.Raw(item.Name)</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            }
+        </div>
+    </div>
+
+</section>
+

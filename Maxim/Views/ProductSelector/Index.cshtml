@@ -1,0 +1,117 @@
+﻿@model maximFinal.Models.ProductSelectorModel
+
+
+
+
+    
+    <div class="container">
+        <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#brands">
+                            Brands
+                        </a>
+                    </h4>
+                </div>
+                <div id="brands" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form>
+                            @foreach (var b in Model.Brands)
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">@b.Name
+                                </label>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#cateogries">
+                            Cateogries
+                        </a>
+                    </h4>
+                </div>
+                <div id="cateogries" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <form>
+                            @foreach (var i in Model.Categories)
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">@i.Name
+                                </label>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#industries">
+                            industries
+                        </a>
+                    </h4>
+                </div>
+                <div id="industries" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <form>
+                            @foreach (var i in Model.Industries)
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">@i.Name
+                                </label>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#standards">
+                            Standards
+                        </a>
+                    </h4>
+                </div>
+                <div id="standards" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <form>
+                            @foreach (var i in Model.Standards)
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">@i.Name
+                                </label>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#applications">
+                            Applications
+                        </a>
+                    </h4>
+                </div>
+                <div id="applications" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <form>
+                            @foreach (var i in Model.Applications)
+                            {
+                                <label class="checkbox-inline">
+                                    <input type="checkbox" value="">@i.Name
+                                </label>
+                            }
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+     </div>   

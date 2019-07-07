@@ -1,0 +1,381 @@
+﻿@model maximFinal.Models.Product
+
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+@*<h2>Details</h2>
+
+    <div>
+        <h4>Product</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Name)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Name)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Description)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Description)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Features)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Features)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Specification)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Specification)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.TempThumbnail)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.TempThumbnail)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Featured)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Featured)
+            </dd>
+            <dt>
+                @Html.DisplayNameFor(model => model.Brand)
+            </dt>
+            <dd>
+                @Html.DisplayFor(model => model.Brand.Id)
+            </dd>
+        </dl>
+    </div>
+    <div>
+        <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+        <a asp-action="Index">Back to List</a>
+    </div>*@
+
+@*<div class="container" id="product-section">
+
+    <div class="wrapper row">
+        <div class="preview col-md-4">
+
+            <div class="preview-pic tab-content">
+
+                @{ int totalImages = 1; }
+                <div class="tab-pane active" id="pic-@totalImages"><img src="@Model.TempThumbnail" /></div>
+
+                @foreach (var a in @Model.Attachment)
+                {
+                    if (a.Type == "image/png" && a.ThumbnailTemp != @Model.TempThumbnail)
+                    {
+                        totalImages++;
+                        <div class="tab-pane" id="pic-@totalImages"><img src="@Html.Raw(a.ThumbnailTemp)" /></div>
+
+                    }
+                }
+            </div>
+            @{ totalImages = 1; }
+
+            <ul class="preview-thumbnail nav nav-tabs">
+                <li class="active">
+                    <a data-target="#pic-@totalImages" data-toggle="tab"><img src="@Model.TempThumbnail" /></a>
+                </li>
+
+                @foreach (var a in @Model.Attachment)
+                {
+
+                    if (a.Type == "image/png" && a.ThumbnailTemp != @Model.TempThumbnail)
+                    {
+                        totalImages++;
+                        <li><a data-target="#pic-@totalImages" data-toggle="tab"><img src="@Html.Raw(a.ThumbnailTemp)" /></a></li>
+
+                    }
+                }
+
+            </ul>
+
+        </div>
+        <div class="details col-md-8">
+            <h3 class="product-title">@Model.Name</h3>
+            <div class="rating">
+                <div class="stars">
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star checked"></span>
+                    <span class="fa fa-star"></span>
+                    <span class="fa fa-star"></span>
+                </div>
+                <span class="review-no">41 reviews</span>
+            </div>
+            <p class="product-description">@Html.Raw(@Model.Description)</p>
+            <h4 class="price">current price: <span>$180</span></h4>
+            <p class="vote"><strong>91%</strong> of buyers enjoyed this product! <strong>(87 votes)</strong></p>
+
+
+            <div class="action">
+                <button class="add-to-cart btn btn-default" type="button">add to cart</button>
+                <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>
+            </div>
+
+
+        </div>
+
+    </div>
+*@
+@*<hr class="dividerWhite">
+    <div class="wrapper row">
+        <div class="preview col-md-12">
+
+            <ul class="nav nav-tabs">
+                <li class="active"><a data-toggle="tab" href="#features">Features</a></li>
+                <li><a data-toggle="tab" href="#specifications">Specifications</a></li>
+                <li><a data-toggle="tab" href="#documents">Documents</a></li>
+            </ul>
+
+            <div class="tab-content">
+                <div id="features" class="tab-pane fade in active">
+                    <h3>Features</h3>
+                    <p>@Html.Raw(@Model.Features)</p>
+                </div>
+                <div id="specifications" class="tab-pane fade">
+                    <h1 class="productPage">Specifications</h1>
+                    <p><table>@Html.Raw(@Model.Specification)</table></p>
+                </div>
+                <div id="documents" class="tab-pane fade">
+                    <h1 class="productPage">Documents</h1>
+                    <p>
+                        @foreach (var a in @Model.Attachment)
+                        {
+
+                            if (a.Type == "application/pdf" && a.ThumbnailTemp != @Model.TempThumbnail)
+                            {
+
+                                <a href="@Html.Raw(a.ThumbnailTemp)">@Html.Raw(a.ThumbnailTemp)</a>
+
+                            }
+                        }
+
+                    </p>
+                </div>
+            </div>
+
+
+
+
+        </div>
+
+
+    </div>
+    </div>*@<!-- end container -->
+<!-- ========================= SECTION CONTENT ========================= -->
+    <div id="top" class="container-fluid" style="background-color:black;padding:100px">
+        <nav class="mb-3">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="#">Home</a></li>
+                <li class="breadcrumb-item"><a href="#">Category name</a></li>
+                <li class="breadcrumb-item"><a href="#">Sub category</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Items</li>
+            </ol>
+        </nav>
+
+        <div class="row">
+            <div class="col-xl-10 col-md-9 col-sm-12">
+
+
+                <main class="card">
+                    <div class="row no-gutters">
+                        <aside class="col-sm-6 border-right">
+                            <article class="gallery-wrap">
+                                <div class="img-big-wrap">
+
+                                    <div> <a href="@Model.TempThumbnail" data-fancybox=""><img src="@Model.TempThumbnail"></a></div>
+                                </div> <!-- slider-product.// -->
+                                <div class="img-small-wrap">
+                                    @foreach (var a in @Model.Attachment)
+                                    {
+                                        if (a.Type == "image/png" && a.ThumbnailTemp != @Model.TempThumbnail)
+                                        {
+                                            <div class="item-gallery"> <img src="@Html.Raw(a.ThumbnailTemp)"></div>
+                                        }
+                                    }
+                                    @*<div class="item-gallery"> <img src="images/items/2.jpg"></div>
+                                    <div class="item-gallery"> <img src="images/items/3.jpg"></div>
+                                    <div class="item-gallery"> <img src="images/items/4.jpg"></div>*@
+                                </div> <!-- slider-nav.// -->
+                            </article> <!-- gallery-wrap .end// -->
+                        </aside>
+                        <aside class="col-sm-6">
+                            <article class="card-body">
+                                <!-- short-info-wrap -->
+                                <h3 class="title mb-3">@Model.Name</h3>
+
+                                <div class="mb-3">
+                                    <var class="price h3 text-warning">
+                                        <span class="currency">US $</span><span class="num">1299</span>
+                                    </var>
+                                    <span></span>
+                                </div> <!-- price-detail-wrap .// -->
+                                <dl>
+                                    <dt>Description</dt>
+                                    <dd>
+                                        <p>
+                                            @if (!String.IsNullOrEmpty(Model.Description))
+                                            {
+                                                @Html.Raw(String.Join(" ", Model.Description.Split().Take(30)))
+
+                                            }
+                                            ...
+                                        </p>
+                                    </dd>
+                                </dl>
+                                <dl class="row">
+                                    <dt class="col-sm-3">Brand</dt>
+                                    <dd class="col-sm-9">@Html.Raw(Model.Brand.Name)</dd>
+
+                                    <dt class="col-sm-3">Delivery</dt>
+                                    <dd class="col-sm-9">USA, and Europe </dd>
+                                </dl>
+                                <div class="rating-wrap">
+
+                                    <ul class="rating-stars">
+                                        <li style="width:80%" class="stars-active">
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                        <li>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i> <i class="fa fa-star"></i>
+                                            <i class="fa fa-star"></i>
+                                        </li>
+                                    </ul>
+                                    <div class="label-rating">132 reviews</div>
+                                    <div class="label-rating">154 orders </div>
+                                </div> <!-- rating-wrap.// -->
+                                <hr>
+                                <div class="row">
+                                    <div class="col-sm-5">
+                                        <dl class="dlist-inline">
+                                            <dt>Quantity: </dt>
+                                            <dd>
+                                                <select class="form-control form-control-sm" style="width:70px;">
+                                                    <option> 1 </option>
+                                                    <option> 2 </option>
+                                                    <option> 3 </option>
+                                                </select>
+                                            </dd>
+                                        </dl>  <!-- item-property .// -->
+                                    </div> <!-- col.// -->
+                                    <div class="col-sm-7">
+                                        <dl class="dlist-inline">
+                                            @*<dt>Size: </dt>
+                                            <dd>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2" type="radio">
+                                                    <span class="form-check-label">SM</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2" type="radio">
+                                                    <span class="form-check-label">MD</span>
+                                                </label>
+                                                <label class="form-check form-check-inline">
+                                                    <input class="form-check-input" name="inlineRadioOptions" id="inlineRadio2" value="option2" type="radio">
+                                                    <span class="form-check-label">XXL</span>
+                                                </label>
+                                            </dd>*@
+                                        </dl> <!-- item-property .// -->
+                                    </div> <!-- col.// -->
+                                </div> <!-- row.// -->
+                                <hr>
+                                <a href="#" class="btn  btn-warning"> <i class="fa fa-envelope"></i> Contact Supplier </a>
+                                <a href="#" class="btn  btn-outline-warning"> Start Order </a>
+                                <!-- short-info-wrap .// -->
+                            </article> <!-- card-body.// -->
+                        </aside> <!-- col.// -->
+                    </div> <!-- row.// -->
+                </main> <!-- card.// -->
+                <!-- PRODUCT DETAIL -->
+                <article class="card mt-3">
+                    <div class="card-body">
+                        <h4>Detail overview</h4>
+                        <p>
+                            @Html.Raw(Model.Description)
+                        </p>
+                    </div> <!-- card-body.// -->
+                </article> <!-- card.// -->
+                <!-- PRODUCT DETAIL .// -->
+
+            </div> <!-- col // -->
+            <aside class="col-xl-2 col-md-3 col-sm-12">
+                <div class="card">
+                    <div class="card-header">
+                        Trade Assurance
+                    </div>
+                    <div class="card-body small">
+                        <span>@Model.Brand.Name</span>
+                        <hr>
+                        Transaction Level: Good <br>
+                        Supplier Assessments: Best
+                        <hr>
+                        11 Transactions $330,000+
+                        <hr>
+                        Response Time 24h <br>
+                        Response Rate: 94%  <br>
+                        <hr>
+                        <a href="">Visit Brand pofile</a>
+
+                    </div> <!-- card-body.// -->
+                </div> <!-- card.// -->
+                <div class="card mt-3">
+                    <div class="card-header">
+                        You may like
+                    </div>
+                    @*<div class="card-body row">
+                        <div class="col-md-12 col-sm-3">
+                            <figure class="item border-bottom mb-3">
+                                <a href="#" class="img-wrap"> <img src="images/items/2.jpg" class="img-md"></a>
+                                <figcaption class="info-wrap">
+                                    <a href="#" class="title">The name of product</a>
+                                    <div class="price-wrap mb-3">
+                                        <span class="price-new">$280</span> <del class="price-old">$280</del>
+                                    </div> <!-- price-wrap.// -->
+                                </figcaption>
+                            </figure> <!-- card-product // -->
+                        </div> <!-- col.// -->
+                        <div class="col-md-12 col-sm-3">
+                            <figure class="item border-bottom mb-3">
+                                <a class="img-wrap"> <img src="images/items/3.jpg" class="img-md"></a>
+                                <figcaption class="info-wrap">
+                                    <a href="#" href="#" class="title">The name of product</a>
+                                    <div class="price-wrap mb-3">
+                                        <span class="price-new">$280</span>
+                                    </div> <!-- price-wrap.// -->
+                                </figcaption>
+                            </figure> <!-- card-product // -->
+                        </div> <!-- col.// -->
+                        <div class="col-md-12 col-sm-3">
+                            <figure class="item border-bottom mb-3">
+                                <a href="#" class="img-wrap"> <img src="images/items/4.jpg" class="img-md"></a>
+                                <figcaption class="info-wrap">
+                                    <a href="#" class="title">The name of product</a>
+                                    <div class="price-wrap mb-3">
+                                        <span class="price-new">$280</span>
+                                    </div> <!-- price-wrap.// -->
+                                </figcaption>
+                            </figure> <!-- card-product // -->
+                        </div> <!-- col.// -->
+                    </div> <!-- card-body.// -->*@
+                </div> <!-- card.// -->
+            </aside> <!-- col // -->
+        </div> <!-- row.// -->
+
+
+
+    </div><!-- container // -->

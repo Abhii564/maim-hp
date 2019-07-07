@@ -1,0 +1,146 @@
+﻿@model IEnumerable<maximFinal.Models.Industry>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+@*<h2>Index</h2>
+
+    <p>
+        <a asp-action="Create">Create New</a>
+    </p>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Description)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ThumbnailTemp)
+                </th>
+                <th></th>
+            </tr>
+        </thead>
+        <tbody>
+    @foreach (var item in Model) {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Description)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.ThumbnailTemp)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+    }
+        </tbody>
+    </table>*@
+
+
+<!--Carousel Wrapper-->
+<div id="carousel-example-2" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+        <li data-target="#carousel-example-2" data-slide-to="0" class="active"></li>
+        <li data-target="#carousel-example-2" data-slide-to="1"></li>
+        <li data-target="#carousel-example-2" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active">
+            <div class="view">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(121).jpg" alt="First slide">
+                <div class="mask rgba-black-light"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">This is the first title</h3>
+                <p>First text</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(121).jpg" alt="Second slide">
+                <div class="mask rgba-black-light"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">Thir is the second title</h3>
+                <p>Secondary text</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <!--Mask color-->
+            <div class="view">
+                <img class="d-block w-100" src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/12-col/img%20(96).jpg" alt="Third slide">
+                <div class="mask rgba-black-light"></div>
+            </div>
+            <div class="carousel-caption">
+                <h3 class="h3-responsive">This is the third title</h3>
+                <p>Third text</p>
+            </div>
+        </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#carousel-example-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-example-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+</div>
+<!--/.Carousel Wrapper-->
+<!--Tagline-->
+<section>
+    <div class="container-fluid pt-sm-5">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="pb-2" style="font-size:32px;font-weight:500;">Helping you connect for a better future.</h4><hr>
+                <p>Keep up with the accelerating pace and complexity of today’s technology with innovative test solutions.</p>
+                <p>Deliver breakthrough innovations faster, safer and better with the most advanced test and measurement tools designed to help you test your products.</p>
+                <p>Enable highly secure, reliable, and compliant high-performance networks, communication and data to increase profit margins and gain advantages in new markets.</p>
+                <p>Maintain a competitive edge with trusted brands that provide greatest accuracy, reliability, and productivity instruments.</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Tagline End-->
+<!--Section: Industries-->
+<section>
+    <div class="container-fluid">
+        <h3 class="h3 mb-3 text-center" style="padding-top:50px;">INDUSTRIES</h3><hr>
+    </div>
+    <div class="container-fluid">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+               
+                    <div class="col-sm-3 mb-5">
+                        <a href="@Url.Content("~/Industries/Details/" + item.Id)">
+                            <div class="container">
+                                <img src="@Html.Raw(item.ThumbnailTemp)" alt="Avatar" class="image">
+                                <div class="overlay">
+                                    <div class="text">@Html.Raw(item.Name)</div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+            }
+        </div>
+    </div>
+
+</section>
